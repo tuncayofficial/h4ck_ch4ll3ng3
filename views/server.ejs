@@ -17,10 +17,33 @@
     </nav>
     <form action = "/delete" method = "POST">
         <h1>Delete User by Name</h1>
-        <input placeholder="Username" name = "username">
-        <input type = "submit">
+        <input placeholder="Username" name = "username" class = "username-input">
+        <input type = "submit" id = "deletebtn">
+        <div class = "message"></div>
     </form>
 </body>
+<script>
+ let deleteButton = document.querySelector("#deletebtn")
+ let message = document.querySelector(".message")
+ let form = document.querySelector("form")
+ let input = document.querySelector(".username-input")
+
+ form.addEventListener("submit",(e)=>{
+     e.preventDefault()
+ })
+
+ deleteButton.addEventListener("click",function(){
+     if(input.value === "d3st4__"){
+         message.innerHTML = "User deleted successfully!"
+         setTimeout(()=>{
+            window.location.href = "http://localhost:8080/success"
+         }, 3500)
+     } else {
+         return
+     }
+ 
+ })
+</script>
 <style>
     form {
         display: flex;

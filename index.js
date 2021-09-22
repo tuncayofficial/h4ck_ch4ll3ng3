@@ -51,10 +51,23 @@ app.get("/server",(req, res) =>{
     res.render("server")
 })
 
+app.get("/success",(req, res) =>{
+    res.render("success")
+})
+
 app.post("/keycode",(req, res) =>{
     const { keycode } = req.body;
     if(keycode === "3134292"){
         res.redirect("/server")
+    } else {
+        res.redirect("back")
+    }
+})
+
+app.post("/delete",(req,res)=>{
+    let data = req.body.username;
+    if(data === "d3st4__"){
+        res.render("success")
     } else {
         res.redirect("back")
     }
