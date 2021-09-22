@@ -60,3 +60,12 @@ input {
 input:focus {
     outline: none;
 }
+
+input[type = "submit"]{
+    background-color: red;
+    cursor: pointer;
+}
+
+a {
+    color : indigo;
+}
