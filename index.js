@@ -10,7 +10,7 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/zcod29DofuWp",(req,res)=>{
-    res.render("chat")
+    res.render("key")
 })
 
 app.post("/search",(req, res)=>{
@@ -32,7 +32,7 @@ app.get("/login",(req,res)=>{
 
 app.post("/login",(req,res)=>{
     let { username, password } = req.body
-    if(username === "sams3p1ol_" && password === "mrrobot31"){
+    if(username === "sams3p1ol_" && password === "mrrobot3111"){
         res.redirect("/dashboard")
     } else {
         res.redirect("/login")
