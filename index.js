@@ -47,4 +47,17 @@ app.get("/zcod29DofuWp",(req, res) =>{
     res.render("key")
 })
 
+app.get("/server",(req, res) =>{
+    res.render("server")
+})
+
+app.post("/keycode",(req, res) =>{
+    const { keycode } = req.body;
+    if(keycode === "3134292"){
+        res.redirect("/server")
+    } else {
+        res.redirect("back")
+    }
+})
+
 app.listen(8080, () => console.log("Listening for requests on http://localhost:8080"))

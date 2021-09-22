@@ -15,21 +15,14 @@
             <li target = "_blank" class="item"><a href = "/login">Login Your PC</a></li>
         </ul>
     </nav>
-    <div class="userlist">
-        <h1>Connected Users</h1>
-        <ul>
-            <li>hxnry</li>
-            <li>d3st4__</li>
-            <li>MALICI1OUS</li>
-            <li>sams3p1ol_</li>
-            <li>Mad4meHxck</li>
-            <li>fr0sty</li>
-            <li>l00kattheconsolee</li>
-        </ul>
-    </div>
+    <form action = "/delete" method = "POST">
+        <h1>Delete User by Name</h1>
+        <input placeholder="Username" name = "username">
+        <input type = "submit">
+    </form>
 </body>
 <style>
-    .userlist {
+    form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -38,27 +31,14 @@
         height: 500px;
         background-color: white;
         color: black;
+        border-radius: 7px;
         margin: auto;
-        margin-top : 40px;
-        border-radius: 8px;
+        margin-top: 40px;
     }
 
-    .userlist ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    form input {
+        margin : 30px;
+        border: 3px solid black;
     }
 </style>
-<script>
-    window.onload = function(){
-        const object = {
-            username : "sams3p1ol_",
-            password : "mrrobot31",
-            id : 56
-        }
-
-        return console.log(object)
-    }
-</script>
 </html>
